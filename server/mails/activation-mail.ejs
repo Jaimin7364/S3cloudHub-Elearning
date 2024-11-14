@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activation Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .email_wrapper {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .email-header {
+            background: #007bff;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .email-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .email-body {
+            padding: 20px;
+        }
+
+        .email-body p {
+            margin: 0 0 10px;
+            line-height: 1.6;
+        }
+
+        .email-body h2 {
+            font-size: 24px;
+            color: #007bff;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .email-body p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="email_wrapper">
+        <div class="email-header">
+            <h1>Welcome to S3CloudHub</h1>
+        </div>
+        <div class="email-body">
+            <p>Hi <%= user.name %>,</p>
+            <p>Thank you for signing up with S3CloudHub. Please enter the below to activate your account.</p>
+            <h2><%= activationCode %></h2>
+            <p>Please enter this code on the activation page within 5 minutes.</p>
+            <p>If you did not sign up for an account with S3CloudHub, please ignore this email.</p>
+            <p>Thank you,</p>
+            <p>S3CloudHub Team</p>
+        </div>
+    </div>
+</body>
+</html>
